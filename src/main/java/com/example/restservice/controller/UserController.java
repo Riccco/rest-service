@@ -1,4 +1,5 @@
-package com.example.restservice.service;
+package com.example.restservice.controller;
+
 import com.example.restservice.model.User;
 import com.example.restservice.service.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
