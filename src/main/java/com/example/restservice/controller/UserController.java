@@ -1,5 +1,4 @@
 package com.example.restservice.controller;
-
 import com.example.restservice.model.User;
 import com.example.restservice.service.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
 
-    @Autowired
+
     private UserRepository userRepository;
+
+    @Autowired
+    public void setUserRepository(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     @PostMapping("/register")
     public String register(@RequestBody User user) {
